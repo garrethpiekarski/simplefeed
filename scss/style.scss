@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+#container {
+  width: 100%;
+  max-width: 1024px;
+  text-align: left;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+h1, h2, h3, h4 {
+  font-family: verdana, tahoma, sans-serif;
+  color: #069;
+}
+
+section#controlSection {
+  label, input, button {
+    display: block;
+  }
+  input[type="text"] {
+    max-width: 100%;
+    min-width: 250px;
+    padding: 5px 10px;
+  }
+}
+
+section#viewSection {
+  #viewFrame {
+    height: 300px;
+    width: 100%;
+    border: 1px solid #eee;
+    overflow: auto;
+  }
+  #viewPanel {
+    display: table;
+    overflow: visible;
+    item {
+      display: table-row;
+      &:nth-child(2n) {
+        background-color: #efefef;
+      }
+      * {
+        display: table-cell;
+      }
+    }
+  }
+}
