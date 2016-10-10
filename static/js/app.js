@@ -1,1 +1,1 @@
-!function(u){u("#urlSubmit").click(function(){var l=u.trim(u("#urlField").val());u.ajax({url:"./urldata?url="+l,success:function(l){u("#viewPanel").html(l)}})})}(jQuery);
+!function(e){e("#urlSubmit").click(function(){var u=e.trim(e("#urlField").val()),c=e(".sourceTypeSelect:checked").val();e.ajax({url:"./urldata?url="+u+"&sourcetype="+c,success:function(u){e("#viewPanel").html(u)}})})}(jQuery);

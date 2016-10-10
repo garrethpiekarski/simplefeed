@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var request = require('request');
 var validurl = require('valid-url');
+var outputBuilder  = require('./lib/bodyProcessor.js');
 
 app.use(express.static('static'));
 
@@ -14,11 +15,13 @@ app.get('/urldata', function (req, res) {
   if (typeof req.query.url === 'undefined') {
     res.send('no url supplied');
   } else {
-    let url = req.query.url;
+    let url = req.query.url,
+        sourceType = req.query.sourcetype;
     if (validurl.isUri(url)) {
       request(url, function (error, response, body) {
         if (!error && response.statusCode == 200) {
-          res.send(body);
+          let responseBody = body;
+          res.send(responseBody);
         } else {
           res.send(error);
         }
