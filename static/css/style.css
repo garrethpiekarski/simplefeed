@@ -18,7 +18,8 @@ body {
 h1,
 h2,
 h3,
-h4 {
+h4,
+legend {
   font-family: verdana, tahoma, sans-serif;
   color: #069; }
 
@@ -28,9 +29,13 @@ section#controlSection button {
   display: block; }
 
 section#controlSection input[type="text"] {
-  max-width: 100%;
-  min-width: 250px;
+  width: 100%;
   padding: 5px 10px; }
+
+section#controlSection fieldset {
+  border: 1px solid #ccc; }
+  section#controlSection fieldset legend {
+    font-weight: bold; }
 
 section#controlSection label input[type="radio"] {
   display: inline; }
@@ -48,7 +53,7 @@ section#controlSection #urlSubmit {
 section#viewSection #viewFrame {
   height: 300px;
   width: 100%;
-  border: 1px solid #eee;
+  border: 1px solid #ccc;
   overflow: auto; }
 
 section#viewSection #viewPanel {

@@ -5,7 +5,7 @@
   <title>Simplefeed</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <meta charset="utf-8">
-  <meta name="viewport" content="width=devide-width">
+  <meta name="viewport" content="width=device-width">
 </head>
 
 <body>
@@ -15,9 +15,27 @@
       <h2>Define Data Source</h2>
       <label for="urlField">URL</label>
       <input type="text" id="urlField">
-      <label for="radioXML">
-      <input type="radio" name="sourceType" id="radioXML" value="xml" class="sourceTypeSelect" checked>&nbsp;XML
-      </label>
+      <fieldset>
+        <legend>File Type</legend>
+        <label for="radioXML">
+          <input type="radio" name="sourceTypeField" id="radioXML" value="xml" class="sourceTypeSelect" checked>&nbsp;XML
+        </label>
+        <label for="radioTXT">
+          <input type="radio" name="sourceTypeField" id="radioTXT" value="txt" class="sourceTypeSelect">&nbsp;Tab-delimited Text
+        </label>
+        <label for="radioCSV">
+          <input type="radio" name="sourceTypeField" id="radioCSV" value="csv" class="sourceTypeSelect">&nbsp;Comma Separated Values
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Feed Format</legend>
+        <label for="radioGoogle">
+          <input type="radio" name="feedFormatField" id="radioGoogle" value="google" class="feedFormatSelect" checked>&nbsp;Google
+        </label>
+        <label for="radioBorderfree">
+          <input type="radio" name="feedFormatField" id="radioBorderfree" value="borderfree" class="feedFormatSelect" >&nbsp;Borderfree
+        </label>
+      </fieldset>
       <button id="urlSubmit">View Data</button>
     </section>
     <section id="viewSection">

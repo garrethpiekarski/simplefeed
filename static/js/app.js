@@ -1,1 +1,1 @@
-!function(e){e("#urlSubmit").click(function(){var u=e.trim(e("#urlField").val()),c=e(".sourceTypeSelect:checked").val();e.ajax({url:"./urldata?url="+u+"&sourcetype="+c,success:function(u){e("#viewPanel").html(u)}})})}(jQuery);
+!function(e){e("#urlSubmit").click(function(){var c=e.trim(e("#urlField").val()),l=e(".sourceTypeSelect:checked").val(),a=e(".feedFormatSelect:checked").val();e.ajax({url:"./urldata?url="+c+"&sourceType="+l+"&feedFormat="+a,dataType:"json",success:function(c){e("#viewPanel").html(JSON.stringify(c))}})})}(jQuery);

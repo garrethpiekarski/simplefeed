@@ -11,9 +11,10 @@ app.get('/', function (req, res) {
 });
 
 app.get('/urldata', function (req, res) {
+  res.setHeader('Content-Type', 'application/json');
   let responsebody = '';
   if (typeof req.query.url === 'undefined') {
-    res.send('no url supplied');
+    res.send({'error': 'no url supplied'});
   } else {
     let url = req.query.url,
         sourceType = req.query.sourcetype;
@@ -21,13 +22,18 @@ app.get('/urldata', function (req, res) {
       request(url, function (error, response, body) {
         if (!error && response.statusCode == 200) {
           let responseBody = body;
-          res.send(responseBody);
+          outputBuilder.setFeedOptions({
+            content: responseBody,
+            mode: req.query.sourceType,
+            feedFormat: req.query.feedFormat
+          });
+          res.send(outputBuilder.getOutput());
         } else {
           res.send(error);
         }
       });
     } else {
-      res.send('The supplied URL is not valid.');
+      res.send({'error': 'The supplied URL is not valid.'});
     }
   }
 });

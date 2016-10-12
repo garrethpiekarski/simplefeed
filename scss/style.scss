@@ -21,7 +21,8 @@ body {
 h1,
 h2,
 h3,
-h4 {
+h4,
+legend {
   font-family: verdana, tahoma, sans-serif;
   color: #069;
 }
@@ -33,9 +34,14 @@ section#controlSection {
     display: block;
   }
   input[type="text"] {
-    max-width: 100%;
-    min-width: 250px;
+    width: 100%;
     padding: 5px 10px;
+  }
+  fieldset {
+    border: 1px solid #ccc;
+    legend {
+      font-weight: bold;
+    }
   }
   label input[type="radio"] {
     display: inline;
@@ -57,7 +63,7 @@ section#viewSection {
   #viewFrame {
     height: 300px;
     width: 100%;
-    border: 1px solid #eee;
+    border: 1px solid #ccc;
     overflow: auto;
   }
   #viewPanel {
