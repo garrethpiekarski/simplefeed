@@ -8,6 +8,7 @@ body {
   text-align: center;
   overflow-x: hidden;
   width: 100%;
+  font-family: verdana, tahoma, sans-serif;
 }
 
 #container {
@@ -23,7 +24,6 @@ h2,
 h3,
 h4,
 legend {
-  font-family: verdana, tahoma, sans-serif;
   color: #069;
 }
 
@@ -60,6 +60,7 @@ section#controlSection {
 }
 
 section#viewSection {
+  margin-bottom: 20px;
   #viewFrame {
     height: 300px;
     width: 100%;

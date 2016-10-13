@@ -6,7 +6,8 @@ body {
   padding: 0;
   text-align: center;
   overflow-x: hidden;
-  width: 100%; }
+  width: 100%;
+  font-family: verdana, tahoma, sans-serif; }
 
 #container {
   width: 100%;
@@ -20,7 +21,6 @@ h2,
 h3,
 h4,
 legend {
-  font-family: verdana, tahoma, sans-serif;
   color: #069; }
 
 section#controlSection label,
@@ -50,18 +50,19 @@ section#controlSection #urlSubmit {
   section#controlSection #urlSubmit:hover {
     background: #08B; }
 
-section#viewSection #viewFrame {
-  height: 300px;
-  width: 100%;
-  border: 1px solid #ccc;
-  overflow: auto; }
-
-section#viewSection #viewPanel {
-  display: table;
-  overflow: visible; }
-  section#viewSection #viewPanel item {
-    display: table-row; }
-    section#viewSection #viewPanel item:nth-child(2n) {
-      background-color: #efefef; }
-    section#viewSection #viewPanel item * {
-      display: table-cell; }
+section#viewSection {
+  margin-bottom: 20px; }
+  section#viewSection #viewFrame {
+    height: 300px;
+    width: 100%;
+    border: 1px solid #ccc;
+    overflow: auto; }
+  section#viewSection #viewPanel {
+    display: table;
+    overflow: visible; }
+    section#viewSection #viewPanel item {
+      display: table-row; }
+      section#viewSection #viewPanel item:nth-child(2n) {
+        background-color: #efefef; }
+      section#viewSection #viewPanel item * {
+        display: table-cell; }
